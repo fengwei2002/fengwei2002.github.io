@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>【数据库系统概论习题】数据库安全性 | konng</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.8c89cc94.css" as="style"><link rel="preload" href="/assets/js/app.bfd04b02.js" as="script"><link rel="preload" href="/assets/js/9.ba3ad4ce.js" as="script"><link rel="preload" href="/assets/js/68.8f892ff8.js" as="script"><link rel="preload" href="/assets/js/7.c9f2a6a8.js" as="script"><link rel="prefetch" href="/assets/js/1.181eaf55.js"><link rel="prefetch" href="/assets/js/10.a740bfd5.js"><link rel="prefetch" href="/assets/js/11.33f28795.js"><link rel="prefetch" href="/assets/js/12.063d7da9.js"><link rel="prefetch" href="/assets/js/13.8b9422fe.js"><link rel="prefetch" href="/assets/js/14.a0650725.js"><link rel="prefetch" href="/assets/js/15.b10e1b95.js"><link rel="prefetch" href="/assets/js/16.fefa62fd.js"><link rel="prefetch" href="/assets/js/17.00269735.js"><link rel="prefetch" href="/assets/js/18.fa706d65.js"><link rel="prefetch" href="/assets/js/19.1764f81f.js"><link rel="prefetch" href="/assets/js/20.839e79f7.js"><link rel="prefetch" href="/assets/js/21.9bcb7822.js"><link rel="prefetch" href="/assets/js/22.04e70a65.js"><link rel="prefetch" href="/assets/js/23.cfc88c38.js"><link rel="prefetch" href="/assets/js/24.4f3e69c3.js"><link rel="prefetch" href="/assets/js/25.0c7bad0c.js"><link rel="prefetch" href="/assets/js/26.b583202e.js"><link rel="prefetch" href="/assets/js/27.46b48fcf.js"><link rel="prefetch" href="/assets/js/28.10f1cbae.js"><link rel="prefetch" href="/assets/js/29.8a380584.js"><link rel="prefetch" href="/assets/js/30.826316d5.js"><link rel="prefetch" href="/assets/js/31.6cc7c24a.js"><link rel="prefetch" href="/assets/js/32.d2eb9877.js"><link rel="prefetch" href="/assets/js/33.4206c8c8.js"><link rel="prefetch" href="/assets/js/34.bb817ee9.js"><link rel="prefetch" href="/assets/js/35.e922496a.js"><link rel="prefetch" href="/assets/js/36.3adc1909.js"><link rel="prefetch" href="/assets/js/37.2656e099.js"><link rel="prefetch" href="/assets/js/38.0b833e7c.js"><link rel="prefetch" href="/assets/js/39.80b569f6.js"><link rel="prefetch" href="/assets/js/4.e83067f1.js"><link rel="prefetch" href="/assets/js/40.2d1887a9.js"><link rel="prefetch" href="/assets/js/41.fc21cb66.js"><link rel="prefetch" href="/assets/js/42.e2343566.js"><link rel="prefetch" href="/assets/js/43.2ed916f6.js"><link rel="prefetch" href="/assets/js/44.d6e0b257.js"><link rel="prefetch" href="/assets/js/45.e3376c91.js"><link rel="prefetch" href="/assets/js/46.bec138fe.js"><link rel="prefetch" href="/assets/js/47.74cbc399.js"><link rel="prefetch" href="/assets/js/48.adc43e56.js"><link rel="prefetch" href="/assets/js/49.ee5ff3d8.js"><link rel="prefetch" href="/assets/js/5.a1cf69f7.js"><link rel="prefetch" href="/assets/js/50.cf9170d4.js"><link rel="prefetch" href="/assets/js/51.b8693890.js"><link rel="prefetch" href="/assets/js/52.cb76106f.js"><link rel="prefetch" href="/assets/js/53.4c46a42b.js"><link rel="prefetch" href="/assets/js/54.6d454534.js"><link rel="prefetch" href="/assets/js/55.02111ec0.js"><link rel="prefetch" href="/assets/js/56.410436b1.js"><link rel="prefetch" href="/assets/js/57.ad25942a.js"><link rel="prefetch" href="/assets/js/58.282c8da1.js"><link rel="prefetch" href="/assets/js/59.080fbadb.js"><link rel="prefetch" href="/assets/js/6.39ef4f91.js"><link rel="prefetch" href="/assets/js/60.20501f2f.js"><link rel="prefetch" href="/assets/js/61.00b5c8fb.js"><link rel="prefetch" href="/assets/js/62.4abd1625.js"><link rel="prefetch" href="/assets/js/63.6a4818d8.js"><link rel="prefetch" href="/assets/js/64.77146b86.js"><link rel="prefetch" href="/assets/js/65.6edd994c.js"><link rel="prefetch" href="/assets/js/66.204ac639.js"><link rel="prefetch" href="/assets/js/67.9dbf6e97.js"><link rel="prefetch" href="/assets/js/69.5aa01036.js"><link rel="prefetch" href="/assets/js/70.81f679f0.js"><link rel="prefetch" href="/assets/js/71.c12678d7.js"><link rel="prefetch" href="/assets/js/72.1437139e.js"><link rel="prefetch" href="/assets/js/73.ea48feed.js"><link rel="prefetch" href="/assets/js/74.60a6a9d0.js"><link rel="prefetch" href="/assets/js/75.24e33a36.js"><link rel="prefetch" href="/assets/js/76.4f1c8402.js"><link rel="prefetch" href="/assets/js/77.06d6400f.js"><link rel="prefetch" href="/assets/js/78.834006c6.js"><link rel="prefetch" href="/assets/js/8.7799e00b.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.4f4edd06.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8c89cc94.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg);" data-v-7a046aea><div data-v-e4145d0a data-v-7a046aea><nav class="navbar" data-v-e4145d0a><div class="container" data-v-e4145d0a><a href="/" class="router-link-active" data-v-e4145d0a><span class="navbar-site-name" data-v-e4145d0a>
+          konng
+        </span></a> <div class="navbar-toggler" data-v-e4145d0a><svg class="icon" style="font-size:1.2em;" data-v-e4145d0a data-v-e4145d0a><title data-v-e4145d0a data-v-e4145d0a>menu</title><use xlink:href="#icon-menu" data-v-e4145d0a data-v-e4145d0a></use></svg></div> <div class="navbar-links" data-v-e4145d0a><a href="/" class="navbar-link" data-v-e4145d0a>
+            home
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-e4145d0a>
+            tags
+          </a><a href="/Algorithm/" class="navbar-link" data-v-e4145d0a>
+            algorithm
+          </a><a href="/About/" class="navbar-link" data-v-e4145d0a>
+            about
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-e4145d0a></div></div> <div class="banner" data-v-98d6aa8c data-v-7a046aea data-v-7a046aea><div class="container" data-v-98d6aa8c><div class="center" data-v-98d6aa8c><h1 data-v-98d6aa8c data-v-7a046aea>
+          【数据库系统概论习题】数据库安全性
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-4dd605a1 data-v-4dd605a1><main class="main" data-v-4dd605a1><div class="post" data-v-4dd605a1 data-v-4dd605a1><section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      Created : 2021-06-19
+    </span> <span class="update-date" data-v-4e23451f>
+      Updated : 2021-07-13
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/posts/2021/06/14/_03-sql%E8%AF%AD%E5%8F%A5.html" class="post-link" data-v-4e23451f>
+      Previous Post : 【数据库系统概论习题】关系数据库标准语言 SQL
+    </a> <a href="/posts/2021/06/20/_05-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7.html" class="post-link" data-v-4e23451f>
+      Next Post : 【数据库系统概论习题】数据库完整性
+    </a></section></section> <article class="main-div"><div class="post-content content content__default"><h2 id="什么是数据库的安全性"><a href="#什么是数据库的安全性" class="header-anchor">#</a> 什么是数据库的安全性</h2> <p>数据库的安全性是指保护数据库以防止不合法的使用所造成的数据泄露、更改或破坏</p> <h2 id="举例说明对数据库安全性产生威胁的因素"><a href="#举例说明对数据库安全性产生威胁的因素" class="header-anchor">#</a> 举例说明对数据库安全性产生威胁的因素</h2> <p>非授权用户对数据库的恶意存取和破坏<br>
+数据库中重要或敏感的数据被泄露<br>
+安全环境的脆弱性</p> <h2 id="信息安全标准的发展历史-cc-评估保证级划分的基本内容"><a href="#信息安全标准的发展历史-cc-评估保证级划分的基本内容" class="header-anchor">#</a> 信息安全标准的发展历史，CC 评估保证级划分的基本内容</h2> <details class="showmore"><summary>SHOWMORE</summary> <p>TCSEC/TDI 安全级别划分<br>
+安全级别 定义<br>
+ A1 验证设计（verified design）<br>
+B3 安全域（security domains）<br>
+B2 结构化保护（structural protection）<br>
+B1 标记安全保护（labeled security protection）<br>
+C2 受控的存取保护（controlled access protection）<br>
+C1 自主安全保护（discretionary security protection）<br>
+D 最小保护（minimal protection）</p> <p>CC 评估保证级（EAL）的划分<br>
+评估保证级 定义 TCSEC 安全级别（近似相当）<br>
+EAL1 功能测试（functionally tested）<br>
+EAL2 结构测试（structurally tested） C1<br>
+EAL3 系统地测试和检查（methodically tested and checked） C2<br>
+EAL4 系统地设计、测试和复查（methodically designed，tested and reviewed） B1<br>
+EAL5 半形式化设计和测试（semiformally designed and tested） B2<br>
+EAL6 半形式化验证的设计和测试（semiformally verified design and tested） B3<br>
+EAL7 形式化验证的设计和测试（formally verified design and tested） A1</p></details> <h2 id="实现数据库安全性控制的常用方法和技术"><a href="#实现数据库安全性控制的常用方法和技术" class="header-anchor">#</a> 实现数据库安全性控制的常用方法和技术</h2> <ol><li>用户身份鉴别<br>
+该方法由系统提供一定的方式让用户标识自己的名字或身份。每次用户要求进入系统时，由系统进行核对，通过鉴定后才提供系统的使用权。（密码）</li> <li>多层存取控制<br>
+通过用户权限定义和合法权检查确保只有合法权限的用户访问数据库，所有未被授权的人员无法存取数据。例如 C2 级中的自主存取控制（DAC），B1 级中的强制存取控制（MAC）</li> <li>视图机制<br>
+为不同的用户定义视图，通过视图机制把要保密的数据对无权存取的用户隐藏起来，从而自动地对数据提供一定程度的安全保护</li> <li>审计<br>
+建立审计日志，把用户对数据库的所有操作自动记录下来放入审计日志中， DBA 可以利用审计跟踪的信息，重现导致数据库现有状况的一系列事件，找出非法存取数据的人、时间和内容等</li> <li>数据加密<br>
+对存储和传输的数据进行加密处理，从而使得不知道解密算法的人无法获知数据的内容</li></ol> <h2 id="数据库自主存取控制方法和强制存取方法"><a href="#数据库自主存取控制方法和强制存取方法" class="header-anchor">#</a> 数据库自主存取控制方法和强制存取方法</h2> <ol><li>自主存取控制方法：定义各个用户对不同数据对象的存取权限。当用户对数据库访问时首先检查用户的存取权限。防止不合法用户对数据库的存取。</li> <li>强制存取控制方法：每一个数据对象被（强制地）标以一定的密级，每一个用户也被（强制地）授予某一个级别的许可证。系统规定只有具有某一许可证级别的用户才能存取某一个密级的数据对象。</li></ol> <p>自主存取控制中自主的含义是：用户可以将自己拥有的存取权限 “自主” 地授予别人。即用户具有一定的 “自主” 权</p> <h2 id="使用-grant-完成下列授权功能"><a href="#使用-grant-完成下列授权功能" class="header-anchor">#</a> 使用 GRANT 完成下列授权功能</h2> <p>学生（学号，姓名，年龄，性别，家庭住址，班级号）<br>
+班级（班级号，班级名，班主任，班长）​</p> <p>授予用户 U1 拥有对两个表的所有权限，并可给其他用户授权<br> <code>GRANT ALL PRIVILEGES ON TABLE 学生，班级</code> <br> <code>TO U1</code> <br> <code>WITH GRANT OPTION;</code></p> <p>授予用户 U2 对学生表具有查看权限，对家庭住址具有更新权限<br>
+ GRANT SELECT,UPDATE（家庭住址）<br>
+ON TABLE 学生<br>
+ TO U2;</p> <p>将对班级表查看权限授予所有用户<br>
+ GRANT SELECT<br>
+ON TABLE 班级<br>
+ TO PUBLIC;</p> <p>将对学生表的查询、更新权限授予角色 R1<br>
+GRANT SELECT,UPDATE<br>
+ON TABLE 学生<br>
+ TO R1;</p> <p>将角色 R1 授予用户 U1，并且 U1 可继续授权给其他角色<br>
+ GRANT R1<br>
+TO U1<br>
+WITH ADMIN OPTION;</p> <h2 id="用-grant-和-revoke-语句-加上视图机制-完成以下授权定义或存取控制功能以及权限撤销"><a href="#用-grant-和-revoke-语句-加上视图机制-完成以下授权定义或存取控制功能以及权限撤销" class="header-anchor">#</a> 用 GRANT 和 REVOKE 语句（加上视图机制）完成以下授权定义或存取控制功能以及权限撤销</h2> <p>职工（职工号，姓名，年龄，职务，工资，部门号）<br>
+部门（部门号，名称，经理名，地址，电话号）​</p> <ol><li>用户王明对两个表有 SELECT 权限<br>
+ TODO 错误的 grant 语句</li></ol> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">GRANT</span> <span class="token keyword">SELECT</span>
+<span class="token keyword">ON</span> 
+    <span class="token keyword">TABLE</span> 职工<span class="token punctuation">,</span>部门 
+<span class="token keyword">TO</span> 王明<span class="token punctuation">;</span>
+<span class="token keyword">REVOKE</span> <span class="token keyword">SELECT</span>
+<span class="token keyword">ON</span> 
+    <span class="token keyword">TABLE</span> 职工<span class="token punctuation">,</span>部门
+<span class="token keyword">FROM</span>
+    王明<span class="token punctuation">;</span>
+</code></pre></div><h2 id="理解并解释强制存取机制中主体、客体、敏感度标记的含义"><a href="#理解并解释强制存取机制中主体、客体、敏感度标记的含义" class="header-anchor">#</a> 理解并解释强制存取机制中主体、客体、敏感度标记的含义</h2> <p>主体是系统中的活动实体，既包括 DBMS 所管理的实际用户，也包括代表用户的各进程</p> <p>客体是系统中的被动实体，是受主体操纵的，包括文件、基本表、索引、视图等<br>
+对于主体和客体，DBMS 为它们每个实例（值）指派一个敏感度标记。</p> <p>敏感度标记被分成若干级别，如绝密、机密、可信、公开等。主体的敏感度标记称为许可证级别，客体的敏感度标记称为密级</p> <h2 id="强制存取控制机制是如何确定主体能否存取客体"><a href="#强制存取控制机制是如何确定主体能否存取客体" class="header-anchor">#</a> 强制存取控制机制是如何确定主体能否存取客体</h2> <p>假设要对关系变量 S 进行强制存取控制，为简化起见，假设要控制存取的数据单元是元组，则每个元组标以密级，如下表所示（4 = 绝密，3 = 机密，2 = 秘密）</p> <p><img alt="20210619171620-2021-06-19" data-src="https://raw.githubusercontent.com/fengwei2002/Pictures_01/master/img/20210619171620-2021-06-19.png" loading="lazy" class="lazy"></p> <p>假设系统的存取规则是<br>
+仅当主体的许可证级别大于或等于客体的密级时才能读取相应的客体<br>
+仅当主体的许可证级别小于或等于客体的密级时才能写相应的客体</p> <p>假定用户 U1 和 U2 的许可证级别分别为 3 和 2，<br>
+则根据规则<br>
+用户 U1 能读元组 S1 和 S2，可修改元组 S2；用户 U2 只能读元组 S1，修改元组 S1</p> <h2 id="什么是数据库的审计功能-为什么要提供审计功能"><a href="#什么是数据库的审计功能-为什么要提供审计功能" class="header-anchor">#</a> 什么是数据库的审计功能，为什么要提供审计功能</h2> <ul><li>审计功能是指 DBMS 的审计模块在用户对数据库执行操作的同时，把所有操作自动记录到系统的审计日志中</li> <li>因为任何系统的安全保护措施都不是完美无缺的，蓄意盗窃破坏数据的人总可能存在。利用数据库的审计功能，审计员可以根据审计日志中记录的信息，分析和重现导致数据库现有状况的一系列事件，找出非法存取数据的人、时间和内容等</li></ul> <p>补充</p> <ul><li>强制存取控制策略是 TCSEC/TDI【B1】级安全级别的特色</li> <li>SQL 的 GRANT 和 REVOKE 语句可以用来实现【自主存取控制】</li> <li>在强制存取控制机制中，当主体的许可证级别等于客体的密级时，主体可以对客体进行【读取、写入】</li> <li>数据库安全技术包括【用户身份鉴别】【自主存取控制和强制存取控制】【视图】【审计】【数据加密】</li> <li>在数据加密技术中，原始数据通过某种加密算法变换为不可直接识别的格式，称为【密文】</li> <li>数据库角色实际上是一组与数据库操作相关的各种【权限】</li> <li>在对用户授予列 INSERT 权限时，一定要包含对【主码】的 INSERT 权限，否则用户的插入会因为空值被拒绝。除了授权的列，其他列的值或者取【空值】，或者为【默认值】</li> <li>【出入机房登记和加锁】不属于实现数据库系统安全性主要技术和方法</li> <li>SQL 中的视图提高了数据库系统的【安全性】</li> <li>SQL 语言的 GRANT 和 REMOVE 语句主要是用来维护数据库的【安全性】</li> <li>在数据库的安全性控制中，授权的数据对象的【范围越小】，授权子系统就越灵活</li></ul> <p>LINKS:</p> <ul><li>https://www.cnblogs.com/kaml8/p/12131614.html</li> <li>https://www.cnblogs.com/RioTian/p/14809044.html</li></ul></div></article> <section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      Created : 2021-06-19
+    </span> <span class="update-date" data-v-4e23451f>
+      Updated : 2021-07-13
+    </span></section> <section class="post-links" data-v-4e23451f><a href="/posts/2021/06/14/_03-sql%E8%AF%AD%E5%8F%A5.html" class="post-link" data-v-4e23451f>
+      Previous Post : 【数据库系统概论习题】关系数据库标准语言 SQL
+    </a> <a href="/posts/2021/06/20/_05-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7.html" class="post-link" data-v-4e23451f>
+      Next Post : 【数据库系统概论习题】数据库完整性
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-4dd605a1><div class="info-card main-div" data-v-9d847660 data-v-4dd605a1><div class="info-card-header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(https://cdn.acwing.com/media/article/image/2021/07/10/101476_991fc8bee1-head002.jpg);" data-v-9d847660><img src="https://cdn.acwing.com/media/article/image/2021/07/10/101476_c34b4745e1-16258036212533745c6e0982ac6523e2b8f82c380622b4383.jpg" alt="konng" class="info-avatar" data-v-9d847660></div> <div class="info-card-body" data-v-9d847660><section class="info-nickname" data-v-9d847660>
+      konng
+    </section> <section class="info-desc" data-v-9d847660>Design is Persistent Trying.</section> <section class="info-contact" data-v-9d847660><section data-v-9d847660><span title="Tai'Yuan, Shan'Xi, China" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>Tai'Yuan, Shan'Xi, China</title><use xlink:href="#icon-location" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          Tai'Yuan, Shan'Xi, China
+        </span></span></section> <section data-v-9d847660><span title="Shan'Xi University" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>Shan'Xi University</title><use xlink:href="#icon-organization" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          Shan'Xi University
+        </span></span></section> <section data-v-9d847660><a href="mailto:konng_0120@qq.com" title="konng_0120@qq.com" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>konng_0120@qq.com</title><use xlink:href="#icon-email" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          konng_0120@qq.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-9d847660><section class="info-sns clearfix" data-v-9d847660><a href="https://github.com/fengwei2002" target="_blank" class="sns-link" data-v-9d847660><span title="GitHub: fengwei2002" class="sns-icon" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1.5em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>GitHub: fengwei2002</title><use xlink:href="#icon-github" data-v-9d847660 data-v-9d847660></use></svg></span></a><a href="https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba" target="_blank" class="sns-link" data-v-9d847660><span title="知乎: kycu" class="sns-icon" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1.5em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>知乎: kycu</title><use xlink:href="#icon-zhihu" data-v-9d847660 data-v-9d847660></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-4dd605a1><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>Table of Contents</span> <div class="post-nav-toc"><ul><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#什么是数据库的安全性">什么是数据库的安全性</a></li><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#举例说明对数据库安全性产生威胁的因素">举例说明对数据库安全性产生威胁的因素</a></li><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#信息安全标准的发展历史-cc-评估保证级划分的基本内容">信息安全标准的发展历史，CC 评估保证级划分的基本内容</a></li><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#实现数据库安全性控制的常用方法和技术">实现数据库安全性控制的常用方法和技术</a></li><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#数据库自主存取控制方法和强制存取方法">数据库自主存取控制方法和强制存取方法</a></li><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#使用-grant-完成下列授权功能">使用 GRANT 完成下列授权功能</a></li><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#用-grant-和-revoke-语句-加上视图机制-完成以下授权定义或存取控制功能以及权限撤销">用 GRANT 和 REVOKE 语句（加上视图机制）完成以下授权定义或存取控制功能以及权限撤销</a></li><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#理解并解释强制存取机制中主体、客体、敏感度标记的含义">理解并解释强制存取机制中主体、客体、敏感度标记的含义</a></li><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#强制存取控制机制是如何确定主体能否存取客体">强制存取控制机制是如何确定主体能否存取客体</a></li><li><a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#什么是数据库的审计功能-为什么要提供审计功能">什么是数据库的审计功能，为什么要提供审计功能</a></li></ul></div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2021/06/19/_04-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7.html#post-comments">
+      Comments
+    </a></div></div></aside></div> <footer class="footer" data-v-1375e54c><p class="footer-sns-links" data-v-1375e54c><a href="https://github.com/fengwei2002" target="_blank" class="sns-link" data-v-1375e54c><span title="GitHub: fengwei2002" class="sns-icon" data-v-1375e54c data-v-1375e54c><svg class="icon" style="font-size:25px;" data-v-1375e54c data-v-1375e54c><title data-v-1375e54c data-v-1375e54c>GitHub: fengwei2002</title><use xlink:href="#icon-github" data-v-1375e54c data-v-1375e54c></use></svg></span></a><a href="https://www.zhihu.com/people/e2df61ca5f33cb1e72e27be2cefd18ba" target="_blank" class="sns-link" data-v-1375e54c><span title="知乎: kycu" class="sns-icon" data-v-1375e54c data-v-1375e54c><svg class="icon" style="font-size:25px;" data-v-1375e54c data-v-1375e54c><title data-v-1375e54c data-v-1375e54c>知乎: kycu</title><use xlink:href="#icon-zhihu" data-v-1375e54c data-v-1375e54c></use></svg></span></a></p> <!----> <!----></footer></div><div class="global-ui"><!----><!----><div id="goTop" class="hide-cat" data-v-bf92849a></div><!----><canvas id="vuepress-canvas-cursor"></canvas><!----></div></div>
+    <script src="/assets/js/app.bfd04b02.js" defer></script><script src="/assets/js/9.ba3ad4ce.js" defer></script><script src="/assets/js/68.8f892ff8.js" defer></script><script src="/assets/js/7.c9f2a6a8.js" defer></script>
+  </body>
+</html>
